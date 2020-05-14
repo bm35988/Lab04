@@ -10,6 +10,8 @@ public class Animal implements Serializable {
     private float wielkosc;
     private String opis;
 
+    public Animal(){}
+
     public Animal(String gatunek, String kolor, float wielkosc, String opis){
         super();
         this.gatunek = gatunek;

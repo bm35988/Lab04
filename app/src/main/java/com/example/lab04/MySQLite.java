@@ -10,9 +10,11 @@ public class MySQLite extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
+
     public MySQLite(Context context){
         super(context, "animalsDB", null, DATABASE_VERSION);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase database){
