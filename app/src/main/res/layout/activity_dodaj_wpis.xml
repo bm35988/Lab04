@@ -7,13 +7,15 @@
     tools:context=".DodajWpis">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/kolor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Kolor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -24,8 +26,36 @@
         android:layout_height="wrap_content"
         android:onClick="wyslij"
         android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="116dp" />
+
+    <EditText
+        android:id="@+id/opis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <EditText
+        android:id="@+id/wielkosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/opis"
+        app:layout_constraintTop_toBottomOf="@+id/kolor"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <Spinner
+        android:id="@+id/gatunek"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="5dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

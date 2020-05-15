@@ -58,9 +58,14 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            String nowy = (String) extras.get("wpis");
-            target.add(nowy);
+            //String nowy = (String) extras.get("wpis");
+            Animal nowy = (Animal) extras.getSerializable("nowy");
+            //target.add(nowy);
+            this.db.dodaj(nowy);
+            //adapter.notifyDataSetChanged();
+            adapter.changeCursor(db.lista());
             adapter.notifyDataSetChanged();
         }
+
     }
 }
